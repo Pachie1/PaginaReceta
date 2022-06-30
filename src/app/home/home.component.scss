@@ -1,0 +1,139 @@
+.home-container{
+  display: flex;
+  justify-content: space-between;
+ .all-foods{
+  background-color: antiquewhite;
+  // Para que ocupe el maximo de la pantalla visible
+  width: 70%;
+  min-height: calc(100vh - 100px);
+  padding: 20px 40px;
+  font-family: "Roboto", sans-serif;
+  .trending-foods{
+    .top{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      h4{
+        text-transform: uppercase;
+        font-weight: bold;
+        border-left: 5px solid #61d1c2;
+        padding-left: 10px;
+      }
+      .view-all{
+        color: #61d1c2;
+        cursor: pointer;
+      }
+    }
+    .foods-thumbnail{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      .food{
+        background-color: rgb(247, 210, 168);
+        padding: 10px;
+        border-radius: 10px;
+        .cover{
+          img{
+            height: 150px;
+            width: 200px;
+            object-fit:cover;
+            border-radius: 10px;
+            cursor: pointer;
+          }
+        }
+        .detail{
+          width: 180px;
+          .name{
+            text-align: center;
+            font-weight: bold;
+            height: 50px;
+            margin-top: 5px;
+            cursor: pointer;
+            user-select: none;
+          }
+        }
+      }
+    }
+  }
+  // .theatre-foods{
+  //   .top{
+  //     display: flex;
+  //     align-items: center;
+  //     justify-content: space-between;
+  //     h4{
+  //       text-transform: uppercase;
+  //       font-weight: bold;
+  //       border-left: 5px solid #61d1c2;
+  //       padding-left: 10px;
+  //     }
+  //     .view-all{
+  //       color: #61d1c2;
+  //       cursor: pointer;
+  //     }
+  //   }
+  //   .foods-thumbnail{
+  //     background-color: antiquewhite;
+  //     display: flex;
+  //     flex-wrap: wrap;
+  //     justify-content: space-between;
+  //     .food{
+  //       padding-top: 5%;
+  //       .cover{
+  //         img{
+
+  //         }
+  //       }
+  //       .detail{
+  //         width: 180px;
+  //         .name{
+  //           font-weight: bold;
+  //           height: 50px;
+  //           margin-top: 5px;
+  //           cursor: pointer;
+  //         }
+  //       }
+  //     }
+  //   }
+  // }
+}
+ .popular-foods{
+  width: 30%;
+  min-height: calc(100vh-80px);
+  padding: 20px 40px;
+  font-family: "Roboto", sans-serif;
+  h4{
+    text-transform: uppercase;
+    font-weight: bold;
+    border-left: 5px solid #61d1c2;
+    padding-left: 10px;
+  }
+  button{
+    margin-right: 15px;
+    margin-bottom: 5px;
+  }
+  .movies{
+    .food{
+      margin-bottom: 20px;
+      margin-top: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      .name{
+        font-weight:bold;
+        cursor: pointer;
+      }
+    }
+    .view-all{
+      color: #61d1c2;
+      text-align: right;
+      margin-top: 30px;
+      cursor: pointer;
+    }
+  }
+ }
+}
+.rating{
+  padding-right: 45px;
+  font-weight: bold;
+}
+

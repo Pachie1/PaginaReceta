@@ -1,0 +1,69 @@
+[
+  {
+    "id": 1,
+    "name": "Torta en taza",
+    "image": "../../assets/images/Torta en taza.jpg",
+    "cPasos": 5,
+    "ingredientes": [
+      "20g de manteca",
+      "1 huevo",
+      "35cc de leche",
+      "40gr de azucar",
+      "35g de harina leudante",
+      "15g de nesquick"
+    ],
+    "pasos":[
+      "Derretir la manteca en el microondas",
+      "Agregar el azúcar, leche y huevo (en ese orden para evitar que la manteca caliente cocine el huevo) y revolver",
+      "Una vez incorporado agregar el harina leudante y el Nesquik",
+      "En caso de quedar muy liquido agregar más harina",
+      "Pasar la mezcla a la taza (sino estaba ya en esta) y cocinar en microondas por 3 min"
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Rapiditas caseras",
+    "image": "../../assets/images/Rapiditas caseras.jpg",
+    "cPasos": 5,
+    "ingredientes": [
+      "500g de harina comun o harina 0000",
+      "5g o media cucharadita de sal",
+      "250cc de agua",
+      "1 cucharadita de polvo para hornear",
+      "4 cucharaditas de aceite de oliva"
+    ],
+    "pasos":[
+      "Mezclar todos los secos.",
+      "Incorporar el aceite de oliva y el agua.",
+      "Amasar hasta conseguir una masa.",
+      "Separar en bolitas y estirar a gusto.",
+      "Cocinar sobre una sartén caliente, 30 segundos por lado o hasta que se comienza a dorar un poco."
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Scones",
+    "image": "../../assets/images/Scones.jpg",
+    "cPasos": 6,
+    "ingredientes": [
+      "400g de harina 0000",
+      "50g de azucar",
+      "Una pizca de sal",
+      "200g de manteca",
+      "50cl de leche",
+      "1 huevo y una yema",
+      "1 clara para pintar"
+    ],
+    "pasos":[
+      "Mezclar todos los secos.",
+      "Agregar la manteca fría a los secos y enarenar (hacer una arena deshaciendo la manteca en los secos).",
+      "Incorporar la leche, el huevo, la yema y formar una masa.",
+      "(Si la masa está muy blanda dejar enfriar 20 min)",
+      "Estirar hasta conseguir un grosor de 1cm y cortar en círculos con un vaso.",
+      "(Si los círculos se pegan al vaso poner un poco de harina en los bordes)",
+      "Poner los scones sobre una asadera, pintarlos con la clara y agregar un poco de azúcar por encima.",
+      "(Intentar que el azúcar no caiga sobre la asadera para que no caramelice sobre esta)",
+      "Cocinar a 180 grados hasta dorar las bases"
+    ]
+  }
+]
