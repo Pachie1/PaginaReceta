@@ -24,12 +24,6 @@ export class FoodComponent implements OnInit {
     if (this.type === 'recetas'){
       this.url = 'http://localhost:4200/assets/data/recetas.json';
     }
-    // if (this.type === 'theatre'){
-    //   this.url = 'http://localhost:4200/assets/data/theatre-movies.json';
-    // }
-    // if (this.type === 'popular'){
-    //   this.url = 'http://localhost:4200/assets/data/popular-movies.json';
-    // }
     this.getReceta();
   }
 
