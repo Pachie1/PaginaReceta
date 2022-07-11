@@ -3,7 +3,7 @@
   justify-content: space-between;
  .all-foods{
   background-color: antiquewhite;
-  width: 71%;
+  // width: 71%;
   min-height: calc(100vh - 100px);
   padding: 20px 40px;
   font-family: "Roboto", sans-serif;
@@ -104,3 +104,16 @@
 }
 
 
+@media screen and (max-width: 425px) {
+  .all-foods{
+      width: 100%;
+  }
+  h4{
+    padding-left:none;
+  }
+}
+@media screen and (min-width: 426px) {
+  .all-foods{
+      width: 71%;
+  }
+}

@@ -1,6 +1,7 @@
 <app-header></app-header>
 <div class="home-container">
-  <div class="bg-dark text-white popular-foods">
+
+  <div *ngIf="mobil == false; else ''" class="bg-dark text-white popular-foods">
     <h4>All Time Popular</h4>
     <button class="btn btn-secondary" (click)="alfabetico()">Alfabeticamente</button>
     <button class="btn btn-secondary" (click)="cPasosMenorMayor()">Pasos me a Ma</button>

@@ -11,12 +11,15 @@ import { Receta } from '../core/interfaces/receta';
 export class HomeComponent implements OnInit {
 
   recetas:any;
-e
+  mobil:boolean=false;
 
   constructor(private http:HttpClient, private router:Router) { }
 
   ngOnInit(): void {
     this.getReceta()
+    if(window.screen.availWidth<=425){
+      this.mobil=true;
+    }
   }
 
 
