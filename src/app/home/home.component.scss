@@ -12,6 +12,15 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
+      .buscador{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .fa-magnifying-glass{
+        position: relative;
+        right: 10%;
+      }
       h4{
         text-transform: uppercase;
         font-weight: bold;
@@ -30,12 +39,12 @@
         background-color: rgb(247, 210, 168);
         padding: 10px;
         border-radius: 10px;
-        transition: all 0.3s ease-in-out;
         .cover{
           img{
             object-fit:cover;
             border-radius: 10px;
             cursor: pointer;
+            user-select: none;
           }
         }
         .detail{
@@ -49,6 +58,7 @@
         }
         .pasos{
           font-size: small;
+          user-select: none;
         }
       }
       .food:hover{
@@ -62,7 +72,7 @@
   min-height: calc(100vh - 80px);
   // padding: 20px 40px;
   font-family: "Roboto", sans-serif;
-  
+
   h4{
     text-transform: uppercase;
     font-weight: bold;
@@ -72,6 +82,9 @@
   button{
     margin-right: 15px;
     margin-bottom: 5px;
+  }
+  .btn-active{
+    background-color: #61d1c2;
   }
   .movies{
     .food{
@@ -83,21 +96,23 @@
       align-items: center;
       justify-content: space-between;
       background-color: rgb(24, 27, 27);
+      cursor: pointer;
       .name{
         font-weight:bold;
         cursor: pointer;
+        user-select: none;
       }
     }
     .view-all{
       color: #61d1c2;
       text-align: right;
       margin-top: 30px;
-      cursor: pointer;
     }
   }
  }
  .pasos{
   font-weight: bold;
+  user-select: none;
   }
 }
 

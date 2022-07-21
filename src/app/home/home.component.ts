@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
 import { Receta } from '../core/interfaces/receta';
+import { HomeserviceService } from '../services/homeservice.service';
 
 
 @Component({
@@ -12,14 +13,16 @@ import { Receta } from '../core/interfaces/receta';
 export class HomeComponent implements OnInit {
 
   recetas:any;
+  arrayFiltrado:any;
   mobil:boolean=false;
   animation1:boolean=true;
-  enableAl:string='true';
-  enableMe:string='true';
-  enableMa:string='true';
+  enableAl:boolean=false;
+  enableMe:boolean=false;
+  enableMa:boolean=false;
 
 
-  constructor(private http:HttpClient, private router:Router) { }
+
+  constructor(private http:HttpClient, private router:Router, private service:HomeserviceService) { }
 
   ngOnInit(): void {
     this.getReceta()
@@ -32,11 +35,12 @@ export class HomeComponent implements OnInit {
   getReceta(){
       this.http.get('http://localhost:4200/assets/data/recetas.json').subscribe((food) => {
         this.recetas = food;
+        this.arrayFiltrado = this.recetas;
       });
     }
 
   alfabetico(){
-    this.recetas.sort((a:any,b:any)=>{
+    this.arrayFiltrado.sort((a:any,b:any)=>{
       if(a.name > b.name){
           return 1;
       }
@@ -50,43 +54,34 @@ export class HomeComponent implements OnInit {
     }else{
       this.animation1=false
     }
-    this.enableAl='true';
-    this.enableMa='false';
-    this.enableMe='false';
-    console.log("enableAl  :",this.enableAl);
-    console.log("enableMa  :",this.enableMa);
-    console.log("enableMe  :",this.enableMe);
-    console.log("----o----");
+    this.enableAl=true;
+    this.enableMa=false;
+    this.enableMe=false;
+    this.service.cambiarColor(this.enableAl,this.enableMe,this.enableMa);
   }
   cPasosMenorMayor(){
-    this.recetas.sort((a:any,b:any)=>a.cPasos-b.cPasos);
+    this.arrayFiltrado.sort((a:any,b:any)=>a.cPasos-b.cPasos);
     if(this.animation1==false){
       this.animation1=true;
     }else{
       this.animation1=false
     }
-    this.enableAl='false';
-    this.enableMa='true';
-    this.enableMe='false';
-    console.log("enableAl  :",this.enableAl);
-    console.log("enableMa  :",this.enableMa);
-    console.log("enableMe  :",this.enableMe);
-    console.log("----o----");
+    this.enableAl=false;
+    this.enableMe=true;
+    this.enableMa=false;
+    this.service.cambiarColor(this.enableAl,this.enableMe,this.enableMa);
   }
   cPasosMayorMenor(){
-    this.recetas.sort((a:any,b:any)=>b.cPasos-a.cPasos);
+    this.arrayFiltrado.sort((a:any,b:any)=>b.cPasos-a.cPasos);
     if(this.animation1==false){
       this.animation1=true;
     }else{
       this.animation1=false
     }
-    this.enableAl='false';
-    this.enableMa='false';
-    this.enableMe='true';
-    console.log("enableAl  :",this.enableAl);
-    console.log("enableMa  :",this.enableMa);
-    console.log("enableMe  :",this.enableMe);
-    console.log("----o----");
+    this.enableAl=false;
+    this.enableMe=false;
+    this.enableMa=true;
+    this.service.cambiarColor(this.enableAl,this.enableMe,this.enableMa);
   }
 
   goToMovie(type: string, id: string){
@@ -99,5 +94,9 @@ export class HomeComponent implements OnInit {
     }else{
       this.mobil=true
     }
+  }
+
+  detectInput(input:any){
+    this.arrayFiltrado = this.service.filtrarArray(input,this.recetas);
   }
 }

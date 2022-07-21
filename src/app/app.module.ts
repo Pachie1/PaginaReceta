@@ -9,6 +9,8 @@ import { FoodComponent } from './food/food.component';
 import { FormsModule } from '@angular/forms';
 import { AuthService } from './services/auth.service';
 import { HttpClientModule } from '@angular/common/http';
+import { FormAddComponent } from './form-add/form-add.component';
+
 
 
 
@@ -19,7 +21,8 @@ import { HttpClientModule } from '@angular/common/http';
     LoginComponent,
     HomeComponent,
     HeaderComponent,
-    FoodComponent
+    FoodComponent,
+    FormAddComponent
   ],
   imports: [
     BrowserModule,

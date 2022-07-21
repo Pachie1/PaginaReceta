@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { FoodComponent } from './food/food.component';
-import { HeaderComponent } from './header/header.component';
+import { FoodModule } from './food/food.module';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 
@@ -10,8 +10,9 @@ const routes: Routes = [
   // si no le agregro pathMath: 'full' se cre un loop infinito
   {path: 'login', component: LoginComponent},
   {path: 'home', component: HomeComponent},
-  {path: 'food/:type/:id',component: FoodComponent},
-  // loadChildren:()=>import('./food/food.component').then(m=>m.FoodComponent)},
+  {path: 'food/:type/:id', component: FoodComponent
+  // loadChildren:()=>import('./food/food.module').then(m=>m.FoodModule)
+  },
   {path: '**', component: LoginComponent},
 ];
 
