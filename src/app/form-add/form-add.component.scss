@@ -1,0 +1,26 @@
+
+.body{
+  background-color: antiquewhite;
+  min-height: calc(100vh - 100px);
+  margin: 0 auto;
+  .row{
+    .col-4{
+      position: relative;
+      top: 50px;
+      background-color: rgb(253, 190, 74);
+      //background-color: rgb(147, 195, 197);
+      padding: 20px;
+      border-radius: 10px;
+      button{
+        position: relative;
+        left: 80%;
+        margin-top: 10px;
+      }
+      .title{
+        text-align: center;
+        text-decoration: underline;
+      }
+    }
+
+  }
+}

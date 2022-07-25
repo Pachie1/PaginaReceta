@@ -7,12 +7,15 @@
   align-items: center;
   justify-content: space-between;
   .logo{
-    font-size: 24px;
-    font-weight: bold;
-    font-family: 'Lobster', cursive;
-    letter-spacing: 4px;
-    cursor: pointer;
-    user-select: none;
+    pre{
+      font-size: 40px;
+      font-weight: bold;
+      font-family: 'Lobster', cursive;
+      letter-spacing: 4px;
+      cursor: pointer;
+      user-select: none;
+      margin-top: 10px;
+    }
   }
   .logout{
     font-size: 18px;

@@ -25,7 +25,7 @@ export class HomeComponent implements OnInit {
   constructor(private http:HttpClient, private router:Router, private service:HomeserviceService) { }
 
   ngOnInit(): void {
-    this.getReceta()
+    this.getReceta();
     if(window.screen.availWidth<=850){
       this.mobil=true;
     }
@@ -86,6 +86,10 @@ export class HomeComponent implements OnInit {
 
   goToMovie(type: string, id: string){
     this.router.navigate(['food', type, id]);
+  }
+
+  gotoForm(){
+    this.router.navigate(['form/-1']);
   }
 
   lista(){

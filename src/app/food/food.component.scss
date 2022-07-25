@@ -7,6 +7,12 @@
     padding: 50px;
     .top {
       display: flex;
+      .mod{
+        color: blue;
+        text-decoration: underline;
+        cursor: pointer;
+        user-select: none;
+      }
       .left {
         .name {
           font-size: 36px;

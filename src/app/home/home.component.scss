@@ -66,6 +66,25 @@
       }
     }
   }
+  .btn-agregar{
+    position: sticky;
+    display: inline-block;
+    line-height: normal;
+    vertical-align: middle;
+    text-align: center;
+    font-size: 55px;
+    left: 100%;
+    bottom: 10%;
+    height: 60px;
+    width: 60px;
+    border-radius: 50px;
+    background-color: rgb(255, 166, 0);
+    cursor: pointer;
+    user-select: none;
+  }
+  .btn-agregar:hover{
+    background-color: rgb(224, 127, 70);
+  }
 }
  .popular-foods{
   width: 29%;

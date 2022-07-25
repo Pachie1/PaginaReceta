@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Receta } from '../core/interfaces/receta';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-food',
@@ -16,7 +17,7 @@ export class FoodComponent implements OnInit {
   recetas: any;
   food: Receta | undefined;
 
-  constructor(private route: ActivatedRoute, private http: HttpClient) { }
+  constructor(private route: ActivatedRoute, private http: HttpClient, private router:Router) { }
 
   ngOnInit(): void {
     this.type = this.route.snapshot.params['type'];
@@ -39,5 +40,8 @@ export class FoodComponent implements OnInit {
     });
   }
 
+  modify(){
+    this.router.navigate(['form', this.id]);
+  }
 
 }

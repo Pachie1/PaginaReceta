@@ -1,2 +1,33 @@
 <app-header></app-header>
 
+<div class="container-fluid body">
+<div class="row">
+  <div class="offset-4 col-4">
+    <div *ngIf="add == true;else agregar">
+      <h2 class="title">Agregar</h2>
+      <label for="nombre">Nombre de receta</label>
+    <input type="text" class="form-control" name="nombre" [(ngModel)]="nombre" id="lNombre">
+    <label for="img">Carga una foto</label>
+    <input type="file" class="form-control" name="img">
+    <label for="Ingredientes">Ingredientes</label>
+    <textarea type="text" class="form-control" name="Ingredientes" placeholder="Terminar cada paso con un punto ." [(ngModel)]="ingredientes" id="lIngre"></textarea>
+    <label for="Pasos">Pasos</label>
+    <textarea type="text" class="form-control" name="Pasos" placeholder="Terminar cada paso con un punto ." [(ngModel)]="pasos" id="lPasos"></textarea>
+    <button class="btn btn-primary" (click)="enviar()">Enviar</button>
+    </div>
+    <ng-template #agregar>
+      <h2 class="title">Modificar</h2>
+      <label for="nombre">Nombre de receta</label>
+      <input type="text" class="form-control" name="nombre" [(ngModel)]="nombre" id="lNombre">
+      <label for="img">Carga una foto</label>
+      <input type="file" class="form-control" name="img">
+      <label for="Ingredientes">Ingredientes</label>
+      <input *ngFor="let ingrediente of ingredientes" type="text" class="form-control my-1" name="Ingredientes" placeholder="Terminar cada paso con un punto ." value={{ingrediente}} >
+      <label for="Pasos">Pasos</label>
+      <textarea *ngFor="let paso of pasos" type="text" class="form-control my-1" name="Pasos" placeholder="Terminar cada paso con un punto ." value={{paso}}></textarea>
+      <button class="btn btn-primary" (click)="enviar()">Enviar</button>
+    </ng-template>
+
+  </div>
+</div>
+</div>
